@@ -25,7 +25,7 @@
 
   <groupId>org.99soft.guice</groupId>
   <artifactId>rocoto</artifactId>
-  <version>6.2</version>
+  <version>6.2-NX1-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <name>99soft :: Rocoto</name>
@@ -119,6 +119,15 @@
           <unpackBundle>true</unpackBundle>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
@@ -133,7 +142,14 @@
     <dependency>
       <groupId>com.google.inject</groupId>
       <artifactId>guice</artifactId>
-      <version>3.0</version>
+      <version>4.0-beta5</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>18.0</version>
       <scope>compile</scope>
     </dependency>
 
